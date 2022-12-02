@@ -3,7 +3,7 @@
         <div :style="isDarkMode ? { color: 'white' } : { color: 'black' }">
             <h1>Artikle</h1>
             <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" v-model="isDarkMode" @click="toogleDarkMode" />
                 <span class="slider round"></span>
             </label>
         </div>
@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts" >
-const { isDarkMode } = useDrakMode();
+const { isDarkMode, toogleDarkMode } = useDrakMode();
 </script>
 
 <style scoped>
